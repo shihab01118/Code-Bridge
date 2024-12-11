@@ -18,7 +18,7 @@ import { Bot, CreditCard, LayoutDashboard, Plus, Video } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import LogoIcon from '@/public/cb-logo.png';
+import LogoIcon from '@/public/CB.png';
 
 const items = [
   { title: 'Dashboard', url: '/dashboard', icon: LayoutDashboard },
@@ -56,7 +56,7 @@ export const AppSidebar = () => {
                         '!bg-primary !text-white': pathname === item.url
                       })}
                     >
-                      <item.icon className='' />
+                      <item.icon />
                       <span>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
@@ -82,7 +82,7 @@ export const AppSidebar = () => {
                           }
                         )}
                       >
-                        {project.name[8]}
+                        {project.name[0].toUpperCase()}
                       </div>
                       <span>{project.name}</span>
                     </div>
